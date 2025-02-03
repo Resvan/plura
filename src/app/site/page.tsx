@@ -26,7 +26,7 @@ export default function Home() {
         </p>
         <div className="grid container grid-cols-1 sm:grid-cols-2 md:grid-cols-3 place-items-center gap-4 mt-6">
           {
-            pricingCards.map((card, index) => (
+            pricingCards.map((card) => (
               <Card className={clsx('w-full h-full flex flex-col justify-between ', { 'border-2 border-primary': card.title === 'Unlimited Saas' })} key={card.title}>
                 <CardHeader>
                   <CardTitle className={clsx('', { 'text-muted-foreground': card.title !== 'Unlimited Saas' })}>{card.title}</CardTitle>
@@ -39,7 +39,7 @@ export default function Home() {
                 <CardFooter className='flex flex-col items-start gap-4'>
                   <div>
                     {
-                      card.features.map((feature, index) => (
+                      card.features.map((feature) => (
                         <div key={feature}
                           className="flex gap-2 items-center">
                           <Check />
